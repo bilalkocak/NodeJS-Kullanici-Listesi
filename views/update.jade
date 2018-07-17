@@ -1,0 +1,30 @@
+extends layout
+block content
+    div.container
+        div.content
+
+                h1 Kullanıcı Güncelle  
+                hr
+                form.form-horizontal(action="/users/update/"+userList._id, method="POST")
+                    div.form-group
+                        label.col-sm-3 Ad Soyad
+                        input.col-sm-9.form-control(name="adSoyad", placeholder="Ad Soyad",value="#{userList.adSoyad}")
+                    div.form-group
+                        label.col-sm-3 Cinsiyet
+                        input.col-sm-9.form-control(name="cinsiyet", placeholder="Cinsiyet",value="#{userList.cinsiyet}")
+                    div.form-group
+                        label.col-sm-3 Şirket
+                        input.col-sm-9.form-control(name="sirket", placeholder="Şirket",value="#{userList.sirket}")
+                    div.form-group
+                        label.col-sm-3 Yaş
+                        input.col-sm-9.form-control(name="yas", placeholder="Yaş" value="#{userList.yas}")
+                    div.form-group
+                        label.col-sm-3 Memleket
+                        input.col-sm-9.form-control(name="memleket", placeholder="Memleket" value="#{userList.memleket}")
+                    div.form-group
+                        label.col-sm-3 Okul
+                        input.col-sm-9.form-control(name="okul", placeholder="Okul" value="#{userList.okul}")
+                    hr
+                    div.form-group
+                        div.col-sm-9
+                            button.btn.btn-info(type="submit") Kullanıcı Güncelle

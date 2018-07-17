@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    div.container
+        div.content
+            div.row
+                h1 Kullanıcı Listesi
+            hr
+            div.row
+                table.table.table-hover.table-bordered
+                    thead
+                        tr
+                            th Ad Soyad
+                            th Cinsiyet
+                            th Şirket
+                            th Yaş
+                            th Memleket
+                            th Okul
+                    tbody
+                        each user, i in userList
+                            tr
+                                td #{user.adSoyad}
+                                td #{user.cinsiyet}
+                                td #{user.sirket}
+                                td #{user.yas}
+                                td #{user.memleket}
+                                td #{user.okul}
+                                td 
+                                    .col-md-3
+                                        a.btn.btn-danger.btn-xs(href="/users/delete/"+user._id) Kullanıcı Sil
+                                    .col-md-3
+                                        a.btn.btn-info.btn-xs(href="/users/update/"+user._id) Kullanıcı Güncelle
+                hr
+                div.row
+                    div.col-md-6
+                        a.btn.btn-warning(href="/users/create") (Yeni Kullanıcı Ekle)
+                    div.col-md-3
+                        a.btn.btn-warning(href="/users/Erkek") (Erkek)
+                    div.col-md-3
+                        a.btn.btn-warning(href="/users/Kadin") (Kadın)
