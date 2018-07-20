@@ -1,0 +1,38 @@
+{
+  "name": "kullanici-listesi",
+  "version": "1.0.0",
+  "description": "React,Node ve Mongo öğrenme adına yaptığım küçük uygulama",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bilalkocak/NodeJS-Kullanici-Listesi.git"
+  },
+  "keywords": [
+    "node",
+    "mongo",
+    "react",
+    "bilal",
+    "kocak",
+    "bilalkocak"
+  ],
+  "author": "Bilal Koçak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bilalkocak/NodeJS-Kullanici-Listesi/issues"
+  },
+  "homepage": "https://github.com/bilalkocak/NodeJS-Kullanici-Listesi#readme",
+  "dependencies": {
+    "concurrently": "^3.6.0",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
